@@ -1,0 +1,30 @@
+name: Agent Reliability Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  reliability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run the refund agent and record traces
+        run: python run_agent.py traces
+
+      - name: Validate traces and gate on regressions
+        uses: felmonon/agent-reliability-harness@v0.2.1
+        with:
+          policy: policies/refund_policy.json
+          traces: traces/*.json
+          baseline: baselines/main.json

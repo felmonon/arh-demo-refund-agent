@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "summary": {
+    "total_traces": 3,
+    "passed_traces": 3,
+    "failed_traces": 0,
+    "average_score": 100.0
+  },
+  "reports": [
+    {
+      "trace_id": "refund-eligible-1042",
+      "agent_name": "refund-copilot",
+      "workflow": "refund",
+      "policy_id": "refund-demo-v1",
+      "score": 100.0,
+      "passed": true,
+      "total_latency_ms": 1190.0,
+      "total_cost_usd": 0.0,
+      "citation_coverage": null,
+      "findings": [],
+      "source_path": "traces/refund-eligible-1042.json"
+    },
+    {
+      "trace_id": "refund-too-old-2001",
+      "agent_name": "refund-copilot",
+      "workflow": "refund",
+      "policy_id": "refund-demo-v1",
+      "score": 100.0,
+      "passed": true,
+      "total_latency_ms": 620.0,
+      "total_cost_usd": 0.0,
+      "citation_coverage": null,
+      "findings": [],
+      "source_path": "traces/refund-too-old-2001.json"
+    },
+    {
+      "trace_id": "refund-unknown-order",
+      "agent_name": "refund-copilot",
+      "workflow": "refund",
+      "policy_id": "refund-demo-v1",
+      "score": 100.0,
+      "passed": true,
+      "total_latency_ms": 440.0,
+      "total_cost_usd": 0.0,
+      "citation_coverage": null,
+      "findings": [],
+      "source_path": "traces/refund-unknown-order.json"
+    }
+  ]
+}

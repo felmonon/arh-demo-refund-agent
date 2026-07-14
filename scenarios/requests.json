@@ -1,0 +1,5 @@
+[
+  { "trace_id": "refund-eligible-1042", "order_id": "ORD-1042", "amount": 49.99 },
+  { "trace_id": "refund-too-old-2001", "order_id": "ORD-2001", "amount": 250.0 },
+  { "trace_id": "refund-unknown-order", "order_id": "ORD-9999", "amount": 20.0 }
+]
